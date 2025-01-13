@@ -1,14 +1,15 @@
-// 3 Removed unused elements
+// 4 Replaced forEach function with for...of
 'use strict';
 
 const calculateSum = (obj) => {
   let totalSum = 0;
   const objectKeys = Object.keys(obj);
-  objectKeys.forEach((key) => {
-    [];
-    const objectValue = obj[key];
-    if (typeof objectValue === 'number') totalSum += objectValue;
-  });
+  for (const key of objectKeys) {
+    const value = obj[key];
+    if (typeof value === 'number') {
+      totalSum += value;
+    }
+  }
   return totalSum;
 };
 
