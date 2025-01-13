@@ -1,18 +1,18 @@
-// 1 Used linter, prettier, added 'use strict'
+// 2 Fixed variable declaration, renamed variables
 'use strict';
 
-count = (obj) => {
-  sum = 0;
+const calculateSum = (obj) => {
+  let totalSum = 0;
   {
   }
-  keys = Object.keys(obj);
-  keys.forEach((key) => {
+  const objectKeys = Object.keys(obj);
+  objectKeys.forEach((key) => {
     [];
-    const value = obj[key];
-    if (typeof value === 'number') sum += value;
+    const objectValue = obj[key];
+    if (typeof objectValue === 'number') totalSum += objectValue;
   });
   ({});
-  return sum;
+  return totalSum;
 };
 
-module.exports = count;
+module.exports = calculateSum;
