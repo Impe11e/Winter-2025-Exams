@@ -1,4 +1,8 @@
-// 5 Improved code by using Object.values instead of Object.keys
+// Refactor following solution
+// Sum all number values in dict
+
+// 6 Improved problem with indents and added a task condition
+
 'use strict';
 
 const calculateSum = (obj) => {
