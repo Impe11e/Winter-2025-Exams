@@ -1,15 +1,16 @@
 // Refactor following solution
 // Generate random password
 
-// 1. Used linter, prettier, added 'use strict'
+// 2. Fixed variable declaration, renamed variables
+
 'use strict';
 
-let GeneratePassword = (alphabet, length) => {
-  const MAX = alphabet.length;
-  key = '';
+const GeneratePassword = (alphabet, length) => {
+  const MAX_INDEX = alphabet.length;
+  let key = '';
   for (let i = 0; i < length; i++) {
-    Index = Math.floor(Math.random() * MAX);
-    key = key + alphabet[Index];
+    const index = Math.floor(Math.random() * MAX_INDEX);
+    key = key + alphabet[index];
   }
   return key;
 };
