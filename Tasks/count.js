@@ -1,5 +1,5 @@
-// Refactor following solution
-// Sum all number values in dict
+// 1 Used linter, prettier, added 'use strict'
+'use strict';
 
 count = (obj) => {
   sum = 0;
