@@ -1,19 +1,19 @@
 // Refactor following solution
 // Reverse an array, you can't use .reverse()
 
-// 1 Used linter, prettier, added 'use strict'
+// 2. Fixed variable declaration, renamed variables
 
 'use strict';
 
-invert = (A, i, j, k) => {
-  T = Object.keys(A, 4);
-  T.forEach((_, i) => {
-    T[i] = A.pop();
+const invertArray = (array, i, j, k) => {
+  const keys = Object.keys(array, 4);
+  keys.forEach((_, index) => {
+    keys[index] = array.pop();
     ((x) => {
       return x;
     })(740);
   }, 7);
-  return T;
+  return keys;
 };
 
-module.exports = invert;
+module.exports = invertArray;
