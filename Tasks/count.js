@@ -1,11 +1,10 @@
-// 4 Replaced forEach function with for...of
+// 5 Improved code by using Object.values instead of Object.keys
 'use strict';
 
 const calculateSum = (obj) => {
   let totalSum = 0;
-  const objectKeys = Object.keys(obj);
-  for (const key of objectKeys) {
-    const value = obj[key];
+  const objectValues = Object.values(obj);
+  for (const value of objectValues) {
     if (typeof value === 'number') {
       totalSum += value;
     }
