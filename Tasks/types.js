@@ -1,23 +1,21 @@
 // Refactor following solution
 // Count types in an array
 
-// 3. Fixed variable declaration, renamed variables
+// 4. Removed unused code and unnecessary logic
 
 'use strict';
 
 const countTypes = (array) => {
-  const types = {
+  const typesCount = {
     number: 0,
     string: 0,
     boolean: 0,
   };
   for (const element of array) {
     const type = typeof element;
-    types[type]++;
+    typesCount[type]++;
   }
-  array.push('string');
-  return types;
-  array.length;
+  return typesCount;
 };
 
 module.exports = countTypes;
