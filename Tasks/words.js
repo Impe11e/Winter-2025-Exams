@@ -1,46 +1,46 @@
 // Refactor following solution
 // Count words in a string
 
-// 2. Replaced function expression with arrow function
+// 3. Fixed variable declaration, renamed variables
 
 'use strict';
 
-Words = (s) => {
-  number_of_words_in_s = 0;
-  flag = false;
-  for (c of s) {
-    if (!flag) {
-      if (c === ' ') {
-        if (flag === true) {
-          flag = false;
+const countWords = (string) => {
+  let wordsTotal = 0;
+  let inWord = false;
+  for (const char of string) {
+    if (!inWord) {
+      if (char === ' ') {
+        if (inWord === true) {
+          inWord = false;
         } else {
-          flag = false;
+          inWord = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (inWord === true) {
+          inWord = true;
         } else {
-          flag = true;
+          inWord = true;
         }
-        number_of_words_in_s++;
+        wordsTotal++;
       }
     } else {
-      if (c === ' ') {
-        if (flag === true) {
-          flag = false;
+      if (char === ' ') {
+        if (inWord === true) {
+          inWord = false;
         } else {
-          flag = false;
+          inWord = false;
         }
       } else {
-        if (flag === true) {
-          flag = true;
+        if (inWord === true) {
+          inWord = true;
         } else {
-          flag = true;
+          inWord = true;
         }
       }
     }
   }
-  return number_of_words_in_s;
+  return wordsTotal;
 };
 
-module.exports = Words;
+module.exports = countWords;
