@@ -1,6 +1,9 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
 
+// 1. Used linter, prettier, added 'use strict'
+'use strict';
+
 const EMPTY = '';
 
 quotes = function (s) {
@@ -29,3 +32,4 @@ quotes = function (s) {
 };
 
 module.exports = quotes;
+
