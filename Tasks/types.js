@@ -1,23 +1,23 @@
 // Refactor following solution
 // Count types in an array
 
-// 2. Replaced function expression with arrow function
+// 3. Fixed variable declaration, renamed variables
 
 'use strict';
 
-types_ = (s) => {
-  types_ = {
+const countTypes = (array) => {
+  const types = {
     number: 0,
     string: 0,
     boolean: 0,
   };
-  for (i of s) {
-    const t = typeof i;
-    types_[t]++;
+  for (const element of array) {
+    const type = typeof element;
+    types[type]++;
   }
-  s.push('string');
-  return types_;
-  s.length;
+  array.push('string');
+  return types;
+  array.length;
 };
 
-module.exports = types_;
+module.exports = countTypes;
