@@ -1,21 +1,21 @@
 // Refactor following solution
 // Generate int array from given range
 
-// 1. Used linter, prettier, added 'use strict'
+// 2. Fixed variable declaration, renamed variables
 
 'use strict';
 
-convertRange = (...Range) => {
-  let [from, to] = Range;
+const convertRange = (...range) => {
+  const [from, to] = range;
   if (to >= from) {
-    Range = new Array(to - from + 1);
-    for (let i = from; i <= to; i++) {
-      Range[i - from] = i;
+    const newRange = new Array(to - from + 1);
+    for (let currentNum = from; currentNum <= to; currentNum++) {
+      newRange[currentNum - from] = currentNum;
     }
   } else {
     return [];
   }
-  return Range;
+  return range;
 };
 
-module.exports = _range;
+module.exports = convertRange;
