@@ -1,12 +1,11 @@
 // Refactor following solution
 // Generate int array from given range
 
-// 4 Improved array index handling and 'return' logic
+// 5. Removed unnecessary destructuring
 
 'use strict';
 
-const convertRange = (...range) => {
-  const [from, to] = range;
+const convertRange = (from, to) => {
   if (to >= from) {
     const arraySize = to - from + 1;
     const newRange = new Array(arraySize);
