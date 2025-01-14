@@ -1,12 +1,13 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
 
-// 1. Used linter, prettier, added 'use strict'
+// 2. Replaced function expression with arrow function
+
 'use strict';
 
 const EMPTY = '';
 
-quotes = function (s) {
+quotes = (s) => {
   res = [];
   open = false;
   for (c of s) {
@@ -32,4 +33,3 @@ quotes = function (s) {
 };
 
 module.exports = quotes;
-
