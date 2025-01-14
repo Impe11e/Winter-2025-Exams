@@ -1,11 +1,11 @@
 // Refactor following solution
 // Count types in an array
 
-// 1. Used linter, prettier, added 'use strict'
+// 2. Replaced function expression with arrow function
 
 'use strict';
 
-types_ = function (s) {
+types_ = (s) => {
   types_ = {
     number: 0,
     string: 0,
