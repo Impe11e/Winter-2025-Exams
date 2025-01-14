@@ -1,6 +1,10 @@
 // Refactor following solution
 // Count types in an array
 
+// 1. Used linter, prettier, added 'use strict'
+
+'use strict';
+
 types_ = function (s) {
   types_ = {
     number: 0,
