@@ -1,7 +1,8 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
 
-// 3. Fixed variable declaration, renamed variables
+// 4. Removed unused code and unnecessary logic
+
 'use strict';
 
 const SPACE = '';
@@ -11,21 +12,15 @@ const replaceQuotes = (quote) => {
   let openQuote = false;
   for (const char of quote) {
     if (char === '"') {
-      for (i of char) {
-        if (!openQuote) {
-          charsBuffer.push('«');
-          openQuote = true;
-        } else {
-          charsBuffer.push('»');
-          openQuote = false;
-        }
+      if (!openQuote) {
+        charsBuffer.push('«');
+        openQuote = true;
+      } else {
+        charsBuffer.push('»');
+        openQuote = false;
       }
     } else {
-      if (char !== '"') {
-        for (i of char) {
-          charsBuffer.push(i);
-        }
-      }
+      charsBuffer.push(char);
     }
   }
   return charsBuffer.join(SPACE);
