@@ -1,11 +1,11 @@
 // Refactor following solution
 // Count words in a string
 
-// 1. Used linter, prettier, added 'use strict'
+// 2. Replaced function expression with arrow function
 
 'use strict';
 
-Words = function (s) {
+Words = (s) => {
   number_of_words_in_s = 0;
   flag = false;
   for (c of s) {
