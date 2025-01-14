@@ -1,35 +1,34 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
 
-// 2. Replaced function expression with arrow function
-
+// 3. Fixed variable declaration, renamed variables
 'use strict';
 
-const EMPTY = '';
+const SPACE = '';
 
-quotes = (s) => {
-  res = [];
-  open = false;
-  for (c of s) {
-    if (c === '"') {
-      for (i of c) {
-        if (!open) {
-          res.push('«');
-          open = true;
+const replaceQuotes = (quote) => {
+  const charsBuffer = [];
+  let openQuote = false;
+  for (const char of quote) {
+    if (char === '"') {
+      for (i of char) {
+        if (!openQuote) {
+          charsBuffer.push('«');
+          openQuote = true;
         } else {
-          res.push('»');
-          open = false;
+          charsBuffer.push('»');
+          openQuote = false;
         }
       }
     } else {
-      if (c !== '"') {
-        for (i of c) {
-          res.push(i);
+      if (char !== '"') {
+        for (i of char) {
+          charsBuffer.push(i);
         }
       }
     }
   }
-  return res.join(EMPTY);
+  return charsBuffer.join(SPACE);
 };
 
-module.exports = quotes;
+module.exports = replaceQuotes;
