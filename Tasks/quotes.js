@@ -1,19 +1,22 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
 
-// 5. Changed some of function logic
+// 6. moved quotes '«', '»' and '"' into constants
 
 'use strict';
 
 const SPACE = '';
+const OPEN_QUOTE = '«';
+const CLOSE_QUOTE = '»';
+const QUOTE = '"';
 
 const replaceQuotes = (quote) => {
   const charsBuffer = [];
   let openQuote = true;
   const stringChars = quote.split('');
   for (let char of stringChars) {
-    if (char === '"') {
-      const quotation = openQuote ? '«' : '»';
+    if (char === QUOTE) {
+      const quotation = openQuote ? OPEN_QUOTE : CLOSE_QUOTE;
       openQuote = !openQuote;
       char = quotation;
     }
