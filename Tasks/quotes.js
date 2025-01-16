@@ -1,11 +1,11 @@
 // Refactor following solution
 // Change double quotation to open or close quotation
 
-// 7. moved quotes into summary object
+// 8. Fixed SPACE naming and usage
 
 'use strict';
 
-const SPACE = '';
+const SEPARATOR = '';
 const QUOTES = {
     OPEN: '«',
     CLOSE: '»',
@@ -15,7 +15,7 @@ const QUOTES = {
 const replaceQuotes = (quote) => {
   const charsBuffer = [];
   let openQuote = true;
-  const stringChars = quote.split('');
+  const stringChars = quote.split(SEPARATOR);
   for (let char of stringChars) {
     if (char === QUOTES.STANDARD) {
       const quotation = openQuote ? QUOTES.OPEN : QUOTES.CLOSE;
@@ -24,7 +24,7 @@ const replaceQuotes = (quote) => {
     }
     charsBuffer.push(char);
   }
-  const output = charsBuffer.join(SPACE);
+  const output = charsBuffer.join(SEPARATOR);
   return output;
 };
 
