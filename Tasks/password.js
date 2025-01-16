@@ -1,18 +1,18 @@
 // Refactor following solution
 // Generate random password
 
-// 3. Replaced assignment operator '=' with addition assignment operator '+='
+// 4. Fixed some variable naming
 
 'use strict';
 
-const GeneratePassword = (alphabet, length) => {
+const generatePassword = (alphabet, length) => {
   const MAX_INDEX = alphabet.length;
-  let key = '';
+  let password = '';
   for (let i = 0; i < length; i++) {
     const index = Math.floor(Math.random() * MAX_INDEX);
-    key += alphabet[index];
+    password += alphabet[index];
   }
-  return key;
+  return password;
 };
 
-module.exports = GeneratePassword;
+module.exports = generatePassword;
